@@ -1,6 +1,8 @@
-# TODO: Write documentation for `Shard::Shell`
-module Shard::Shell
-  VERSION = "0.1.0"
+require "kemal"
 
-  # TODO: Put your code here
+get "/" do
+    "Hello Server";
 end
+
+Kemal.run;
+
