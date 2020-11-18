@@ -12,6 +12,7 @@ crystal: 0.35.1
 dependencies:
   kemal:
     github: kemalcr/kemal
+    branch: master
 
 #development_dependencies:
   #(ADD PRIVATE DEPENDS)
@@ -24,7 +25,7 @@ executables:
   - shard-shell
 
 scripts:
-  make: make
+  make: crystal run src/shard-shell
   install: make install
   clean: make clean
 
