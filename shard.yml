@@ -1,0 +1,35 @@
+name: shard-shell
+version: 0.1.0
+
+authors:
+  - Thanasis Papapostolou (Oblivious) <me262thanos@gmail.com>
+
+description: |
+  An http server/interface for handling filesystems on the cloud
+
+crystal: 0.35.1
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+
+#development_dependencies:
+  #(ADD PRIVATE DEPENDS)
+    #(ADD PRIVATE SUB DEPENDS)
+
+#libraries:
+  #(ADD LIBS)
+
+executables:
+  - shard-shell
+
+scripts:
+  make: make
+  install: make install
+  clean: make clean
+
+targets:
+  shards:
+    main: src/shard-shell
+
+license: GPLv3

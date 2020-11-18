@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rm -r docs
+crystal docs src/shard-shell.cr
