@@ -15,6 +15,6 @@ dependencies:
 
 targets:
   shards:
-    main: src/shard-shell
+    main: src/shard-shell.cr
 
 license: GPLv3
