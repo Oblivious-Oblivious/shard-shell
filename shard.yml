@@ -13,14 +13,6 @@ dependencies:
   skeleton:
     github: Oblivious-Oblivious/skeleton
 
-executables:
-  - shard-shell
-
-scripts:
-  make: crystal run src/shard-shell
-  install: make install
-  clean: make clean
-
 targets:
   shards:
     main: src/shard-shell
