@@ -1,7 +1,7 @@
 require "./spec_helper"
 
-describe Shard::Shell do
-    it "works" do
-        false.should eq false;
+describe ShardShell::Walker do
+    it "walks on a directory and its subdirectories" do
+        ShardShell::Walker.new;
     end
 end

@@ -1,18 +1,25 @@
-INPUT = shard-shell.cr
+BIN = ./bin
+NAME = shard-shell
+INPUT = $(NAME).cr
 
-mk_bin:
-	$(RM) -r ./bin
-	mkdir bin
+CR = crystal
+CROPTS = build --release
+
+CC = clang
+CCOPTS = -O2 -march=native -shared -fPIC
 
 all:
-	crystal src/$(INPUT)
+	@echo
+
+mk_bin:
+	$(RM) -r $(BIN)
+	mkdir $(BIN)
 
 build: mk_bin
-	clang -O2 -march=native -shared src/shard-shell/dir_walker/vector.c src/shard-shell/dir_walker/dir_walker.c -fPIC -o src/shard-shell/dir_walker.so
-	crystal build src/*.cr -o bin/shard-shell
+	$(CR) $(CROPTS) src/*.cr -o bin/$(NAME)
 
 run:
-	./bin/shard-shell
+	./bin/$(NAME)
 
 test:
 	crystal spec spec/*.spec.cr
